@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+		<link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+		<link rel="manifest" href="assets/favicons/manifest.json">
+		<meta name="theme-color" content="#ffffff">
+
+		<title>Hangman Game</title>
+	</head>
+	<body>
+		<audio id="theme" autoplay loop>
+			<source src="assets/audio/ReturnOfJediIntro.mp3" type="audio/mp3">
+			<p>If you are reading this, it is because your browser does not support the audio element.</p>
+		</audio> 
+		<div id="container">
+			<header>
+				<h1>STAR WARS HANGMAN FINAL BATTLE</h1>
+			</header>
+			
+			<div id="mobileAlert"> <div class="centerTxt">Welcome Jedi, Are you on mobile? <br><br>Prepare to face the Dark Side and use the Force on your <br><u>DESKTOP</u> universe</div></div>
+			<div class="clearfix" id="deathstarbg">
+				<img id="deathstar-img" src="assets/images/deathstarinteriorbg.jpg">
+				<div id="lukeskywalker"></div>
+				<div id="lukeskywalkerfights"></div>
+				<div id="lukeskywalkerslashed"></div>
+				<div id="lukeskywalkerwins"></div>
+				<div id="lukeskywalkerKO"></div>
+				<div id="darthvader"></div>
+				<div id="darthvaderfights"></div>
+				<div id="darthvaderslashed"></div>
+				<div id="darthvaderwins"></div>
+				<div id="darthvaderKO"></div>
+
+				<div id="toggleMusic" onclick="game.musicToggle()"><img src="assets/images/mute.png"></div>
+				<div class="healthBar" id="playerHP"></div>
+				<div class="healthBar" id="CPUHP"></div>
+				<div class="hpBackground" id="hpBG1"></div>
+				<div class="hpBackground" id="hpBG2"></div>
+				
+			</div>
+			<div class="clearfix" id="scoreboard">
+				<!-- <img id="trophy-img" src="assets/images/bb8.png"> -->
+				<div id="score">WINS # 0</div>
+			</div>
+
+			<aside>
+			<section>Guess the word to defeat Darth Vader!
+				<div id="wordState"></div>
+			</section>
+			<section>Letters Already Guessed
+				<br>
+				<div id="incorrectLetters"></div>
+				</section>
+			</aside>
+		</div>	
+		
+		<script type="text/javascript" src="assets/js/game.js"></script>
+	</body>
+</html>

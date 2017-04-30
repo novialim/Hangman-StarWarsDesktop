@@ -1,0 +1,295 @@
+@font-face {
+  font-family: 'Star Jedi Hollow';
+  src: url('../fonts/Starjhol.ttf');
+
+  font-family: 'Anakin Mono';
+  src: url('../fonts/anakinmono.ttf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#mobileAlert
+{
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    background:rgba(255,255,255,0.5);
+    z-index: 99999;
+    visibility:hidden;
+}
+
+.centerTxt {
+  font-size: 20px;
+  color: #000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  line-height: 25px;
+  transform: translate(-50%, -50%);
+}
+
+
+body {
+  font-family: 'Anakin Mono', sans-serif;
+  background: #000;
+  text-align: center;
+  color: yellow;
+}
+
+header {
+  font-family: 'Star Jedi Hollow', sans-serif;
+  margin: 20px 0;
+  font-size: 2em;
+  color: #e0d54a;
+}
+
+#deathstarbg {
+  position: relative;
+  width: 450px;
+  margin: 0 auto;
+}
+
+aside {
+  position: relative;
+  color: yellow;
+}
+
+#deathstar-img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 10px;
+}
+
+section {
+  margin-top: 10px;
+}
+
+#wordState {
+  margin: 15px 5px;
+  font-size: 30px;
+  border: 2px dashed #ccc;
+  border-radius: 6px;
+  padding:10px;
+  letter-spacing: 30px;
+}
+
+#incorrectLetters {
+  color: #e64545;
+  margin-bottom: 30px;
+}
+
+#toggleMusic {
+  position: absolute;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+.healthBar {
+  position: absolute;
+  top: 15px;
+  width: 215px;
+  height: 25px;
+  z-index: 9998;
+}
+
+.hpBackground {
+  position: absolute;
+  top: 15px;
+  width: 215px;
+  height: 25px;
+  z-index: 9997;
+  background-color: black;
+}
+
+
+#playerHP {
+  left: 5px;
+  background-color: #dd0b1f;
+}    
+
+#hpBG1 {
+  left: 5px;
+  border: 1px solid #dd0b1f;
+}
+
+#CPUHP {
+  right: 5px;
+  background-color: #00ad23;
+}
+
+#hpBG2 {
+  right: 5px;
+  border: 1px solid #00ad23;
+}
+
+#darthvaderwins {
+  position: absolute;
+  z-index: 9999;
+  bottom: 18%;
+  left: 31%;
+  width: 118px;
+  height: 186px;
+  background-image: url('../images/darthvaderwins.png');
+  display: none;
+}
+
+#darthvaderslashed {
+  position: absolute;
+  z-index: 9999;
+  bottom: 9%;
+  left: 31%;
+  width: 80px;
+  height: 122px;
+  background-image: url('../images/darthvaderslashed.png');
+  display: none;
+} 
+
+#darthvaderKO {
+  position: absolute;
+  z-index: 9999;
+  bottom: 9%;
+  left: 31%;
+  width: 114px;
+  height: 48px;
+  background-image: url('../images/darthvaderKO.png');
+  display: none;
+}
+
+#lukeskywalkerKO {
+  position: absolute;
+  z-index: 9999;
+  bottom: 10%;
+  left: 54%;
+  width: 100px;
+  height: 29px;
+  background-image: url('../images/lukeskywalkerwins.png');
+  display: none;
+} 
+
+#lukeskywalkerwins {
+  position: absolute;
+  z-index: 9999;
+  bottom: 10%;
+  left: 54%;
+  width: 124px;
+  height: 126px;
+  background-image: url('../images/lukeskywalkerwins.png');
+  display: none;
+} 
+
+#lukeskywalkerslashed {
+  position: absolute;
+  z-index: 9999;
+  bottom: 10%;
+  left: 54%;
+  width: 50px;
+  height: 94px;
+  background-image: url('../images/lukeskywalkerslashed.png');
+  display: none;
+} 
+
+#lukeskywalker {
+  position: absolute;
+  z-index: 9999;
+  bottom: 8%;
+  left: 54%;
+  width: 80px;
+  height: 112px;
+  margin: 1% auto;
+  /*display: block;*/
+  background: url('../images/lukeskywalker1.png') left center;
+  animation: lswplay .8s steps(6) infinite;
+}
+
+@keyframes lswplay {
+    100% { background-position: -480px; }
+}
+
+#lukeskywalkerfights {
+  position: absolute;
+  z-index: 9999;
+  bottom: 3%;
+  left: 45%;
+  width: 160px;
+  height: 180px;
+  margin: 2% auto;
+  background: url('../images/lukeskywalkerfight.png') left center;
+  animation: lswfights .8s steps(10) infinite;
+  display: none;
+}
+
+@keyframes lswfights {
+    100% { background-position: -1600px; }
+}
+
+#darthvader {
+  position: absolute;
+  z-index: 9999;
+  bottom: 6%;
+  left: 30%;
+  width: 120px;
+  height: 144px;
+  margin: 1% auto;
+  /*display: block;*/
+  background: url('../images/darthvader.png') left center;
+  animation: dvplay .8s steps(8) infinite;
+}
+
+@keyframes dvplay {
+    100% { background-position: -960px; }
+}
+
+#darthvaderfights {
+  position: absolute;
+  z-index: 9999;
+  bottom: 2%;
+  left: 31%;
+  width: 180px;
+  height: 220px;
+  margin: 1% auto;
+  background: url('../images/darthvaderfights.png') left center;
+  animation: dvfights .8s steps(11) infinite;
+  display: none;
+}
+
+@keyframes dvfights {
+    100% { background-position: -1980px; }
+
+
+#scoreboard {
+  width: 180px;
+  margin: 20px auto 0 auto;
+}
+
+
+/*#trophy-img {
+  position: relative;
+  float: left;
+}
+*/
+
+#score {
+  position: relative;
+  float: right;
+  font-size: 1.5em;
+  color: #ffffff;
+  margin-top: 10px;
+  color: green;
+}
+
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
